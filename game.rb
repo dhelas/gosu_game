@@ -9,6 +9,8 @@ class TicTacToe < Gosu::Window
   def initialize
     super(SCREEN_WIDTH.to_i, SCREEN_HEIGHT.to_i, false)
 
+    @font = Gosu::Font.new(self, Gosu::default_font_name, 20)
+
     @blue = 40
     @x_vel = 0.0
     @y_vel = 0.0
@@ -16,6 +18,7 @@ class TicTacToe < Gosu::Window
     @x = SCREEN_WIDTH / 2.0
     @y = SCREEN_HEIGHT / 2.0
     @angle = 0.0
+    @score = 0
   end
 
   def update
